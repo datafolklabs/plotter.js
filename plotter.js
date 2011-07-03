@@ -6,17 +6,17 @@ var plotter = {
 	map: null,
 	multiple: 10.7639104,
 	paths: null,
+	plot: null,
 	points: [],
-	poly: null,
 	report: null,
 	bind: function(settings){
 		plotter.map = settings.map;
 		plotter.multiple = settings.multiple;
 		plotter.report = settings.report;
-		plotter.poly = new google.maps.Polygon({ strokeWeight: settings.strokeWeight, fillColor: settings.fillColor });
+		plotter.plot = new google.maps.Polygon({ strokeWeight: settings.strokeWeight, fillColor: settings.fillColor });
 		plotter.paths = new google.maps.MVCArray;
-		plotter.poly.setMap(plotter.map);
-		plotter.poly.setPath(new google.maps.MVCArray([plotter.paths]));
+		plotter.plot.setMap(plotter.map);
+		plotter.plot.setPath(new google.maps.MVCArray([plotter.paths]));
 	},
 	on: function(){
 		plotter.listener = google.maps.event.addListener(plotter.map, 'click', function(event){
@@ -46,7 +46,7 @@ var plotter = {
 		plotter.map.setOptions({draggableCursor: 'crosshair'});
 	},
 	calc: function(){
-		area_met = google.maps.geometry.spherical.computeArea(plotter.poly.getPath());
+		area_met = google.maps.geometry.spherical.computeArea(plotter.plot.getPath());
 		var area_ft = (area_met * plotter.multiple).toFixed(2);
 		var x = area_ft.split('.');
 		var x1 = x[0];
