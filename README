@@ -4,14 +4,21 @@ AUTHOR: Dustin Larimer - DataFolkLabs, LLC
 
 DESCRIPTION:
 
-Plotter.js is a light-weight, unobtrusive plotting utility for the Google Maps API (v3).
-Bind the plugin to a Google Map and attach hooks to existing interactions to turn the 
-utility on/off or return calculated area of a selection. This plugin has minimal 
-jQuery dependency, but hopefully that can be removed soon.
+Plotter.js is a light-weight, unobtrusive plotting utility for the Google Maps 
+API (v3). Bind the plugin to a Google Map and attach hooks to existing 
+interactions to turn the utility on/off or return calculated area of a 
+selection. This plugin has minimal jQuery dependency, but hopefully that can 
+be removed soon.
 
-Please visit our project page: https://github.com/datafolklabs/plotter.js
+Please visit our project page: 
+    
+    https://github.com/datafolklabs/plotter.js
 
-View the demonstration: dustinlarimer.com/sandbox/utils/plotter/
+
+An online demo is available at: 
+
+    http://datafolklabs.com/plotter.js/
+    
     
 LICENSE:
 
