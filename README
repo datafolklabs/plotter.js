@@ -9,6 +9,11 @@ Plotter.js is a utility for the Google Maps API allowing developers to lay
 markers around plots of land (or buildings, bodies of water, etc) and quickly
 determine the square footage within the boundaries of those markers.
 
+Please visit our project page:
+
+    https://github.com/datafolklabs/plotter.js
+    
+    
 LICENSE:
 
 Plotter.js is Open Source and distributed under a BSD 'three-clause' license.
