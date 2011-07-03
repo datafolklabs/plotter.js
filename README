@@ -1,0 +1,15 @@
+
+NAME: plotter.js
+
+AUTHOR: Dustin Larimer - DataFolkLabs, LLC
+
+DESCRIPTION:
+
+Plotter.js is a utility for the Google Maps API allowing developers to lay
+markers around plots of land (or buildings, bodies of water, etc) and quickly
+determine the square footage within the boundaries of those markers.
+
+LICENSE:
+
+Plotter.js is Open Source and distributed under a BSD 'three-clause' license.
+Please see the LICENSE file included with this software.
