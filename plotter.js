@@ -1,4 +1,4 @@
-// Plotter.js
+// Plotter.js v0.1.3
 
 var plotter = {
 	bounds: new google.maps.LatLngBounds(),
