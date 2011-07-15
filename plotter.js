@@ -1,19 +1,24 @@
-// Plotter.js v0.1.3
+// Plotter.js
 
 var plotter = {
 	bounds: new google.maps.LatLngBounds(),
+	icon: "marker.png",
 	listener: null,
 	map: null,
 	multiple: 10.7639104,
 	paths: null,
 	plot: null,
 	points: [],
+	style: { fill: "#3FA9F5", stroke: 1 },
 	report: null,
 	bind: function(settings){
-		plotter.map = settings.map;
-		plotter.multiple = settings.multiple;
-		plotter.report = settings.report;
-		plotter.plot = new google.maps.Polygon({ strokeWeight: settings.strokeWeight, fillColor: settings.fillColor });
+		if (settings.icon) { plotter.icon = settings.icon }
+		if (settings.map) { plotter.map = settings.map }
+		if (settings.multiple) { plotter.multiple = settings.multiple }
+		if (settings.report) { plotter.report = settings.report }
+		if (settings.strokeWeight) { plotter.style.stroke = settings.strokeWeight }
+		if (settings.fillColor) { plotter.style.fill = settings.fillColor }
+		plotter.plot = new google.maps.Polygon({ strokeWeight: plotter.style.stroke, fillColor: plotter.style.fill });
 		plotter.paths = new google.maps.MVCArray;
 		plotter.plot.setMap(plotter.map);
 		plotter.plot.setPath(new google.maps.MVCArray([plotter.paths]));
@@ -22,7 +27,7 @@ var plotter = {
 		plotter.listener = google.maps.event.addListener(plotter.map, 'click', function(event){
 			plotter.paths.insertAt(plotter.paths.length, event.latLng);
 			var point = new google.maps.Marker({
-				icon: 'marker.png',
+				icon: plotter.icon,
 				position: event.latLng,
 				map: plotter.map,
 				draggable: true
