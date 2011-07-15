@@ -11,7 +11,7 @@
 0.1.3 - development (will be released as 0.1.4) 
 ------------------------------------------------------------------------------
 
-- 
+- Make config options actually optional.. otherwise resort to default.
 
 
 0.1.2 - July 2, 2011
